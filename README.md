@@ -1,6 +1,6 @@
 # Radar-Diffusion: Towards Dense and Accurate Radar Perception Via Efficient Cross-modal Diffusion Model
 ## News
-- 25 June, 2024: Paper accepted by  _IEEE Robotics and Automation Letters (RA-L) _!
+- 25 June, 2024: Paper accepted by  _IEEE Robotics and Automation Letters (RA-L)_!
 ## TODO
 - [ ] Release training and testing code for Radar-Diffusion.
 - [ ] Release pre-trained models.
@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This repository contains the source code and pre-trained models of Radar-Diffusion described in our paper "Towards Dense and Accurate Radar Perception Via Efficient Cross-modal Diffusion Model." accepted by  _IEEE Robotics and Automation Letters (RA-L) _, 2024.
+This repository contains the source code and pre-trained models of Radar-Diffusion described in our paper "Towards Dense and Accurate Radar Perception Via Efficient Cross-modal Diffusion Model." accepted by  _IEEE Robotics and Automation Letters (RA-L)_, 2024.
 
 __Authors__: [Ruibin Zhang](https://github.com/RoboticsZhang)<sup>*</sup>, [Donglai Xue](https://github.com/dungloi)<sup>*</sup>, [Yuhan Wang]([https://boyuzhou.net/](https://github.com/johannwyh)), [Ruixu Geng](https://github.com/ruixv), and [Fei Gao](http://zju-fast.com/fei-gao/)
 
