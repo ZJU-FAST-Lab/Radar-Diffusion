@@ -12,9 +12,9 @@
 
 This repository contains the source code and pre-trained models of Radar-Diffusion described in our paper "Towards Dense and Accurate Radar Perception Via Efficient Cross-modal Diffusion Model." accepted by  _IEEE Robotics and Automation Letters (RA-L)_, 2024.
 
-__Authors__: [Ruibin Zhang](https://github.com/RoboticsZhang)<sup>*</sup>, [Donglai Xue](https://github.com/dungloi)<sup>*</sup>, [Yuhan Wang](https://github.com/johannwyh)), [Ruixu Geng](https://github.com/ruixv), and [Fei Gao](http://zju-fast.com/fei-gao/)
+__Authors__: [Ruibin Zhang](https://github.com/RoboticsZhang)<sup>*</sup>, [Donglai Xue](https://github.com/dungloi)<sup>*</sup>, [Yuhan Wang](https://github.com/johannwyh), [Ruixu Geng](https://github.com/ruixv), and [Fei Gao](http://zju-fast.com/fei-gao/)
 
-__Paper__: [arXiv](https://arxiv.org/abs/2403.08460), [IEEE Early Access]([https://ieeexplore.ieee.org/document/10478625](https://github.com/ZJU-FAST-Lab/Radar-Diffusion))
+__Paper__: [arXiv](https://arxiv.org/abs/2403.08460), [IEEE Early Access](https://github.com/ZJU-FAST-Lab/Radar-Diffusion)
 
 __Supplementary Video__: [YouTube](https://www.youtube.com/watch?v=Q3S-9w3dGV4&t=13s), [Bilibili](https://www.bilibili.com/video/BV1eK421b76M/?spm_id_from=333.337.search-card.all.click).
 
