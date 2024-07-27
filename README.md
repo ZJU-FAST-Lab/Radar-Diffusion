@@ -39,10 +39,10 @@ cd diffusion_consistency_radar
 pip install -e .
 sh launch/inference_cd_example_batch.sh
 ```
-The above script runs consistency inference in **only 1 step** using the pre-trained checkpoint. After that, you can find the predicted results and Ground-Truth LiDAR bev point clouds in diffusion_consistency_radar/inference_results .
+The above script runs consistency inference in **only 1 step** using the pre-trained checkpoint. After that, you can find the predicted results and Ground-Truth LiDAR bev point clouds in **diffusion_consistency_radar/inference_results**.
 
 ## Dataset Pre-processing
-1. First, download the [Coloradar dataset](https://o365coloradoedu-my.sharepoint.com/personal/chhe5305_colorado_edu/_layouts/15/onedrive.aspx?ga=1&LOF=1&id=%2Fpersonal%2Fchhe5305%5Fcolorado%5Fedu%2FDocuments%2FColoRadar%2Fkitti).
+1. First, download the [Coloradar dataset](https://arpg.github.io/coloradar/) (kitti format).
 2. Unzip all the subsequences in a folder, then run: 
 ```
 python Coloradar_pre_processing/generate_coloradar_timestamp_index.py
