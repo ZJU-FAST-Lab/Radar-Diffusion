@@ -25,7 +25,7 @@ __Supplementary Video__: [YouTube](https://www.youtube.com/watch?v=Q3S-9w3dGV4&t
   </p>
 </a>
 
-_Abstract_: Millimeter wave (mmWave) radars have attracted significant attention from both academia and industry due to their capability to operate in extreme weather conditions. However, they face challenges in terms of sparsity and noise interference, which hinder their application in the field of
+__Abstract__: Millimeter wave (mmWave) radars have attracted significant attention from both academia and industry due to their capability to operate in extreme weather conditions. However, they face challenges in terms of sparsity and noise interference, which hinder their application in the field of
 micro aerial vehicle (MAV) autonomous navigation. To this end, this paper proposes a novel approach to dense and accurate mmWave radar point cloud construction via cross-modal learning. Specifically, we introduce diffusion models, which possess state-of-the-art performance in generative modeling, to
 predict LiDAR-like point clouds from paired raw radar data. We also incorporate the most recent diffusion model inference accelerating techniques to ensure that the proposed method can be implemented on MAVs with limited computing resources. We validate the proposed method through extensive benchmark comparisons and real-world experiments, demonstrating its superior performance and generalization ability..
 
@@ -39,6 +39,8 @@ cd diffusion_consistency_radar
 pip install -e .
 sh launch/inference_cd_example_batch.sh
 ```
+In case of network issues, you can manually download the checkpoints in **diffusion_consistency_radar/checkpoint**.
+
 The above script runs consistency inference in **only 1 step** using the pre-trained checkpoint. After that, you can find the predicted results and Ground-Truth LiDAR bev point clouds in **diffusion_consistency_radar/inference_results**.
 
 ## Dataset Pre-processing
