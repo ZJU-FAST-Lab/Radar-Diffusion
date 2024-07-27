@@ -1,0 +1,74 @@
+data:
+
+    train: [
+        "2_22_2021_longboard_run0",
+        "2_22_2021_longboard_run1",
+        "2_22_2021_longboard_run2",
+        # "2_22_2021_longboard_run3",       #longboard
+        "2_24_2021_aspen_run0",
+        "2_24_2021_aspen_run1",
+        "2_24_2021_aspen_run2",
+        # "2_24_2021_aspen_run3",           #aspen
+        "2_28_2021_outdoors_run0",
+        "2_28_2021_outdoors_run1",
+        "2_28_2021_outdoors_run2",
+        # "2_28_2021_outdoors_run3",        #outdoor
+        "12_21_2020_arpg_lab_run0",
+        "12_21_2020_arpg_lab_run1",
+        "12_21_2020_arpg_lab_run2",
+        # "12_21_2020_arpg_lab_run3",       #arpg
+        "12_21_2020_ec_hallways_run0",
+        "12_21_2020_ec_hallways_run1",
+        "12_21_2020_ec_hallways_run2",   
+        # "12_21_2020_ec_hallways_run3", #hallway
+        "2_23_2021_edgar_classroom_run0",
+        "2_23_2021_edgar_classroom_run1",
+        "2_23_2021_edgar_classroom_run2", 
+        # "2_23_2021_edgar_classroom_run3", #classroom
+        "2_23_2021_edgar_army_run0",
+        "2_23_2021_edgar_army_run1",
+        "2_23_2021_edgar_army_run2", 
+        # "2_23_2021_edgar_army_run3",     #army
+        ]
+
+    test: [
+        "2_22_2021_longboard_run3",
+        "2_22_2021_longboard_run4",
+        "2_22_2021_longboard_run6",
+        "2_22_2021_longboard_run7",       #longboard
+        "2_24_2021_aspen_run3",
+        "2_24_2021_aspen_run4",
+        "2_24_2021_aspen_run5",         
+        "2_24_2021_aspen_run6",
+        "2_24_2021_aspen_run7",
+        "2_24_2021_aspen_run8",   
+        "2_24_2021_aspen_run9",
+        "2_24_2021_aspen_run10",
+        "2_24_2021_aspen_run11",          #aspen
+        "2_28_2021_outdoors_run3",
+        "2_28_2021_outdoors_run4",
+        "2_28_2021_outdoors_run5",        
+        "2_28_2021_outdoors_run6",
+        "2_28_2021_outdoors_run7",
+        "2_28_2021_outdoors_run8",    
+        "2_28_2021_outdoors_run9",        #outdoor
+        "12_21_2020_arpg_lab_run3", 
+        "12_21_2020_arpg_lab_run4",       #arpg
+        "12_21_2020_ec_hallways_run3",
+        "12_21_2020_ec_hallways_run4",    #hallway
+        "2_23_2021_edgar_classroom_run3", 
+        "2_23_2021_edgar_classroom_run4", 
+        "2_23_2021_edgar_classroom_run5", #classroom
+        "2_23_2021_edgar_army_run3",
+        "2_23_2021_edgar_army_run4",
+        "2_23_2021_edgar_army_run5",      #army
+        # "ceiling_longboard_run4",
+        # "ceiling_longboard_run6",
+        # "ceiling_longboard_run7",
+        # # "ceiling_longboard_run3",
+        # "ceiling_outdoor_run5",  
+        # "ceiling_outdoor_run6",  
+        # "ceiling_outdoor_run7",  
+        # "ceiling_outdoor_run8",  
+        # "ceiling_outdoor_run9",  
+        ]

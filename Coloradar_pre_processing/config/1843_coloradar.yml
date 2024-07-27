@@ -1,0 +1,49 @@
+numTxChan: 3
+numRxChan: 4
+# numAntenna
+numChirpsPerFrame: 128
+
+numAdcSamples: 128
+StartFrequency: 77.0000e+9
+Ideltime: 110.0e-6
+
+F_design: 76.8
+
+range_fftsize: 128
+doppler_fftsize: 128
+angle_fftsize: 32
+elevation_fftsize: 32
+# range bin size:
+Fs: 10666000
+SamplePerChripUp: 128
+Kr: 1.00000000377e+14
+chirpRampTime: 13.000e-6
+adc_start_time: 7.00e-6
+
+# velocityBinSize: 0.039
+
+
+
+## field of view to do beamforming
+angles_DOA_az: [-90, 90]
+angles_DOA_ele: [-20,20]
+
+
+crop_low: 0.05
+crop_high: 0.05
+
+lidar_resolution: 0.1
+lidar_polar_azimuth_bins: 100
+
+# 2D Range-Doppler OS-CFAR Parameters used for generating
+# radar pointclouds
+RD_OS_CFAR_WS_COARSE: 8         # Window size
+RD_OS_CFAR_GS_COARSE: 1         # Guard cell
+RD_OS_CFAR_K_COARSE: 0.75     # n'th quantile
+RD_OS_CFAR_TOS_COARSE: 8       # Tos factor
+
+# 1D OS-CFAR Parameters used for peak selection in Azimuth-FFT
+AZ_OS_CFAR_WS_COARSE: 16         # Window size
+AZ_OS_CFAR_GS_COARSE: 8          # Guard cell
+AZ_OS_CFAR_TOS_COARSE: 6         # Tos factor
+
