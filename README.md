@@ -4,7 +4,7 @@
 - 27 July, 2024: Code and pre-trained models released!
 # TODO
 - [x] Release training and testing code for Radar-Diffusion.
-- [x] Release pre-trained models.
+- [x] Release pre-trained models in **diffusion_consistency_radar/checkpoint**.
 - [x] Release user guide. 
 - [x] Release data pre-processing code.
 - [ ] Release performance evaluation code.
@@ -47,7 +47,7 @@ The above script runs consistency inference in **only 1 step** using the pre-tra
 ```
 python Coloradar_pre_processing/generate_coloradar_timestamp_index.py
 ```
-3. Install [patchwork++](https://github.com/url-kaist/patchwork-plusplus.git) by running:
+3. Download [patchwork++](https://github.com/url-kaist/patchwork-plusplus.git) to **Coloradar_pre_processing/patchwork-plusplus**. Then install patchwork++ by running:
 ```
 cd Coloradar_pre_processing/patchwork-plusplus
 pip install -e .
