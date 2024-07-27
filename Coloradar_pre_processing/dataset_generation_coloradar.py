@@ -34,7 +34,6 @@ def pcl_to_cartesian_image (lidar_pcl, save_path):
     lidar_bev_image = np.zeros((X_pixel, Y_pixel))
 
     x_grid = np.linspace(0, MAX_RANGE, X_pixel + 1)
-    # print("x_grid", x_grid)
     y_grid = np.linspace(-MAX_RANGE, MAX_RANGE, Y_pixel + 1)
 
     if lidar_pcl.shape[0] == 0:
@@ -49,14 +48,12 @@ def pcl_to_cartesian_image (lidar_pcl, save_path):
     for i in range(lidar_pcl.shape[0]):
         x_diff = np.abs(x_grid - x[i])
         y_diff = np.abs(y_grid - y[i])
-        # print("y_diff", y_grid - y[i])
         x_i = np.argmin(x_diff)
         y_i = np.argmin(y_diff)
 
         if(x_i >= lidar_bev_image.shape[0]) or (y_i >= lidar_bev_image.shape[1]):
             continue 
         lidar_bev_image[x_i,y_i] = 1
-    # print("lidar_bev_image", lidar_bev_image.shape)
     im = Image.fromarray(np.fliplr((np.flipud(lidar_bev_image)*255)).astype(np.uint8))
     im = im.resize((IMAGE_SHAPE * 2, IMAGE_SHAPE))
     im.save(save_path)
@@ -75,10 +72,7 @@ def load_radar_data(radar_config, radar_index, coloradar_path):
     I = loaded_data_numpy_adc[:, :, :, :, 0]
     Q = loaded_data_numpy_adc[:, :, :, :, 1]
     loaded_data_numpy_adc= I + 1j * Q
-    # print("loaded_data_numpy_adc", type(loaded_data_numpy_adc))
-    
-    # loaded_data_numpy_adc = np.transpose(loaded_data_numpy_adc, (3, 2, 1, 0))  ###R, D, Rx, TX
-    # print("loaded_data_numpy_adc", loaded_data_numpy_adc.shape)
+
     return loaded_data_numpy_adc
 
 
@@ -87,25 +81,21 @@ def load_lidar_data(lidar_index, coloradar_path):
     lidar_base_path = COLO_BASE_PATH + coloradar_path + "/lidar/pointclouds/lidar_pointcloud_" + str(lidar_index) + ".bin"
     pcd = np.fromfile(lidar_base_path, np.float32)
     pcd = np.reshape(pcd, (-1, 4))  ## x, y, z, intensity
-    # print("pcd", pcd.shape)
 
-    #coordinate!
 
     x = pcd[:, 0]
     y = pcd[:, 1]
     z = pcd[:, 2]
     intensity = pcd[:, 3]
-    x = -x  ##coordinate fixing!!  warning zrb!!!
+    x = -x  ##coordinate fixing!! See coloradar coordinate definition.
     y = -y
 
     pcd = np.array([x, y, z, intensity])
     pcd = np.transpose(pcd, (1, 0))
-    # print("pcd", pcd.shape)
+
     pcd_bev = pcd[:, :2]
     pcd_3d = pcd[:, :3]
 
-
-    # print("pcd_bev", pcd_bev.shape)
     return pcd, pcd_3d, pcd_bev
 
 
@@ -116,7 +106,6 @@ def remove_ceiling(point_cloud,  percentage = 10.0, divide_num = 3.0, ) -> np.ar
 
  
     median_height = np.median(sorted_point_cloud[:, 2])
-    # max_height = np.max(sorted_point_cloud[:, 2])
     max_height =  np.percentile(sorted_point_cloud[:, 2], 100 - percentage)
     min_height =  np.percentile(sorted_point_cloud[:, 2], percentage)
 
@@ -206,25 +195,19 @@ def lidar_preprocessing(lidar_pcd, radar_config, remove_ceiling_flag: bool = Tru
 
 def save_pcl_to_mesh(pointcloud, mesh_name):
 
-    # 创建Open3D的PointCloud对象
+
     point_cloud = o3d.geometry.PointCloud()
     point_cloud.points = o3d.utility.Vector3dVector(pointcloud)
 
-    # 保存点云为一个.ply文件，这是一种常见的3D文件格式
     o3d.io.write_point_cloud(mesh_name, point_cloud)
 
 def radar_filtering_by_lidar(radar_pcd_3d, lidar_pcd_3d, threshold = 0.5):  # for RPDNet_benchmark
     radar_pcd_3d_wo_index = radar_pcd_3d[:, :3]
     distances = np.linalg.norm(radar_pcd_3d_wo_index[:, np.newaxis] - lidar_pcd_3d, axis=-1)
 
-    # 找到距离小于阈值的点的索引
     filtered_indices = np.any(distances < threshold, axis=1)
 
-    # 使用索引筛选点云 A 中的点
     filtered_radar_pcl = radar_pcd_3d[filtered_indices]
-
-    # 打印过滤后的点云 A 的形状
-    # print(filtered_radar_pcl.shape)
 
     return filtered_radar_pcl
 
@@ -262,8 +245,7 @@ def save_range_azimuth_image(ramap, radar_config, save_path):
 
     ramap = (ramap - min_value) * (255 / (max_value - min_value))
     ramap= np.clip(ramap, 0, 255)
-    # print("dpcl_trans", dpcl_trans.shape)
-    # ramap= np.clip(ramap, 0, 255)
+
     ramap_numpy = (ramap).astype(np.uint8)
 
     ramap_image = Image.fromarray(ramap_numpy, mode='L')
@@ -271,25 +253,18 @@ def save_range_azimuth_image(ramap, radar_config, save_path):
     ramap_image = ramap_image.resize((radar_config.angle_fftsize * 2, radar_config.range_fftsize))
     ramap_image = ramap_image.rotate(180)
 
-    # img2 = cv2.cvtColor(ramap_image,cv2.COLOR_BGR2RGB)
 
     ramap_image.save(save_path)
 
-    # ramap_image_colar = map_gray_to_rgb(ramap_numpy / 255.0)
-    # ramap_image = ramap_image_colar.resize((radar_config.range_fftsize, 128))
-    # ramap_image = ramap_image.rotate(180)
-    # ramap_image.save(save_path)
 
 
 def save_lidar_cartesian_image(lidar_pcl, radar_config, save_path):
     max_range = math.ceil(radar_config.max_range)
     X_pixel = int((max_range - 0)/ radar_config.lidar_resolution)
     Y_pixel = int((max_range - (-max_range)) / radar_config.lidar_resolution)
-    # print("Y_pixel", Y_pixel)
     lidar_bev_image = np.zeros((X_pixel, Y_pixel))
 
     x_grid = np.linspace(0, max_range, X_pixel + 1)
-    # print("x_grid", x_grid)
     y_grid = np.linspace(-max_range, max_range, Y_pixel + 1)
 
     x = lidar_pcl[:, 0]
@@ -298,7 +273,6 @@ def save_lidar_cartesian_image(lidar_pcl, radar_config, save_path):
     for i in range(lidar_pcl.shape[0]):
         x_diff = np.abs(x_grid - x[i])
         y_diff = np.abs(y_grid - y[i])
-        # print("y_diff", y_grid - y[i])
         x_i = np.argmin(x_diff)
         y_i = np.argmin(y_diff)
 
@@ -329,10 +303,8 @@ def save_lidar_polar_image(lidar_pcl, radar_config, save_path):
 
     r_grid = np.linspace(0, max_range, R_pixel + 1)
     azi_grid = np.linspace(-90, 90, Azi_pixel)
-    # print("r_grid", r_grid)
     r = polar_data[:,0]
     a = polar_data[:,1]
-    # print("a", a)
 
     for i in range(polar_data.shape[0]):
         ri = np.argmax(r_grid>=r[i])
@@ -340,7 +312,6 @@ def save_lidar_polar_image(lidar_pcl, radar_config, save_path):
         if (ri < polar_image.shape[0]) and (ai < polar_image.shape[1]): 
             polar_image[ri,ai] = 1
 
-    # print("polar_image", polar_image.shape)
 
     im = Image.fromarray((polar_image*255).astype(np.uint8))
     im = im.transpose(Image.Transpose.FLIP_TOP_BOTTOM)

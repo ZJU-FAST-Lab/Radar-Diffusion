@@ -9,9 +9,6 @@ def generate_new_files(directory):
     print("start!")
     for root, dirs, files in os.walk(directory):
 
-        # for dir in dirs:
-        #     print("dir:", dir)
-
         cnt = 0
         for dir in dirs:
             cnt = cnt + 1
@@ -55,5 +52,5 @@ def generate_new_files(directory):
         break
 
 
-# 使用示例
+
 generate_new_files('./coloradar_raw_unzipped')
