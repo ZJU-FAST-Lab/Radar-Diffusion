@@ -1,0 +1,2 @@
+*.pt filter=lfs diff=lfs merge=lfs -text
+diffusion_consistency_radar/checkpoint filter=lfs diff=lfs merge=lfs -text
