@@ -99,7 +99,7 @@ class KarrasDenoiser:
         weights = append_dims(
             get_weightings(self.weight_schedule, snrs, self.sigma_data), dims
         )
-        terms["perceptual_loss"] = self.lpips_loss((x_start + 1.0) / 2.0, (denoised + 1.0) / 2.0,)
+        terms["perceptual_loss"] = self.lpips_loss(x_start, denoised) # 0 ~ 1
         
         terms["mse"] = mean_flat(weights * (denoised - x_start) ** 2)
         # terms["loss"] = terms["mse"]
