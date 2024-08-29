@@ -46,7 +46,7 @@ The above script runs consistency inference in **only 1 step** using the pre-tra
 
 ## Dataset Pre-processing
 1. First, download the [Coloradar dataset](https://arpg.github.io/coloradar/) (kitti format).
-   In case of network issues, we share a [download link]((http://zjufast.tpddns.cn:9110/share.cgi?ssid=8079e9c38f6c40239e28ee0bd56ac5f1) here. 
+   In case of network issues, we share a [download link](http://zjufast.tpddns.cn:9110/share.cgi?ssid=8079e9c38f6c40239e28ee0bd56ac5f1) here. 
 2. Unzip all the subsequences in a folder, then run: 
 ```
 python Coloradar_pre_processing/generate_coloradar_timestamp_index.py
