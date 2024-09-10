@@ -13,7 +13,6 @@ from . import dist_util
 
 from .nn import mean_flat, append_dims, append_zero
 from .random_util import get_generator
-from .dice_loss import *
 
 def get_weightings(weight_schedule, snrs, sigma_data):
     if weight_schedule == "snr":

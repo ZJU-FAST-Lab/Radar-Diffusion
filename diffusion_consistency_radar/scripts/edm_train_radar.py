@@ -5,7 +5,7 @@ Train a diffusion model on images.
 import argparse
 
 from cm import dist_util, logger
-from cm.image_datasets import load_data
+# from cm.image_datasets import load_data
 from cm.resample import create_named_schedule_sampler
 from cm.script_util_cond import (
     model_and_diffusion_defaults,
