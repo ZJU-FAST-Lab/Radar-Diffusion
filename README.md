@@ -2,7 +2,8 @@
 # News
 - 25 June, 2024: Paper accepted by  _IEEE Robotics and Automation Letters (RA-L)_ !
 - 27 July, 2024: Code and pre-trained models released!
-- 29 August, 2024: Updating Coloradar download link.
+- 29 August, 2024: Updating coloradar dataset [download link](http://zjufast.tpddns.cn:9110/share.cgi?ssid=8079e9c38f6c40239e28ee0bd56ac5f1).
+- 18 October, 2024: Updating checkpoint [download link](http://zjufast.tpddns.cn:9110/share.cgi?ssid=a54ee5a706754b1c9cfb0e4a752180fc) in case that you fail to download the checkpoints uploaded to this git repo.  
 # TODO
 - [x] Release training and testing code for Radar-Diffusion.
 - [x] Release pre-trained models in **diffusion_consistency_radar/checkpoint**.
