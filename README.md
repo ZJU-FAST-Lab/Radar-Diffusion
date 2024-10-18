@@ -55,7 +55,7 @@ python Coloradar_pre_processing/generate_coloradar_timestamp_index.py
 3. Download [patchwork++](https://github.com/url-kaist/patchwork-plusplus.git) to **Coloradar_pre_processing/patchwork-plusplus**. Then install patchwork++ by running:
 ```
 cd Coloradar_pre_processing/patchwork-plusplus
-pip install -e .
+make pyinstall
 ``` 
 4. Generate pre-processed dataset by running:
 ```
