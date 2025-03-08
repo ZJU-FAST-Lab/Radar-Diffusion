@@ -328,7 +328,6 @@ def create_argparser():
         s_tmax=float("inf"),
         s_noise=1.0,
         steps=40,
-        # model_path="/home/ubuntu/coloradar_ws/consistency_models_coloradar/results/radar_lowresolution/ema_0.9999432189950708_080000.pt",  #edm
         model_path="./checkpoint/consistency_distillation_140K_Step.pt",    #cd
         seed=42,
         ts="",
@@ -336,7 +335,9 @@ def create_argparser():
         out_ch = 1,
         dataset_dir = './example_batch/',
         dataloading_config = "./config/data_loading_config_example.yml",
-        output_dir = "",
+        # dataset_dir = '/home/zrb/Mmwave_Dataset/Coloradar/coloradar_after_preprocessing',
+        # dataloading_config = "./config/data_loading_config_example.yml",
+        output_dir = "", ##edgar, outdoors, arpg_lab, ec_hallways, aspen, longboard
     )
     defaults.update(model_and_diffusion_defaults())
     parser = argparse.ArgumentParser()
