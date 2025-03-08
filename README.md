@@ -4,12 +4,13 @@
 - 27 July, 2024: Code and pre-trained models released!
 - 29 August, 2024: Updating coloradar dataset [download link](http://zjufast.tpddns.cn:9110/share.cgi?ssid=a6d37f7f87af4590aaeb345ac9db2346).
 - 18 October, 2024: Updating checkpoint [download link](http://zjufast.tpddns.cn:9110/share.cgi?ssid=a54ee5a706754b1c9cfb0e4a752180fc) in case that you fail to download the checkpoints uploaded to this git repo.  
+- 8 March, 2025: Updating evaluation scripts.
 # TODO
 - [x] Release training and testing code for Radar-Diffusion.
 - [x] Release pre-trained models in **diffusion_consistency_radar/checkpoint**.
 - [x] Release user guide. 
 - [x] Release data pre-processing code.
-- [ ] Release performance evaluation code.
+- [x] Release performance evaluation code.
 
 # Introduction
 
@@ -79,6 +80,14 @@ sh diffusion_consistency_radar/launch/inference_edm.sh
 ```
 sh diffusion_consistency_radar/launch/inference_cd.sh
 ``` 
+4. Evaluate the results:
+
+Change the path and scene name in diffusion_consistency_radar/scripts/evaluate.py, Then:
+```
+cd diffusion_consistency_radar
+python scripts/evaluate.py
+``` 
+Note that due to an unexpected server crash, the original checkpoints were lost. The checkpoints provided in this repo are the ones we retrained, so the quantitative results are different from those in the paper. When benchmarking against the proposed method, you can either use the results from the paper or the results based on the checkpoints provided in this repo.
 
 # Licence
 The source code is released under [MIT](https://en.wikipedia.org/wiki/MIT_License) license.
