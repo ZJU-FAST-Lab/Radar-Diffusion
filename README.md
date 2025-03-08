@@ -82,7 +82,7 @@ sh diffusion_consistency_radar/launch/inference_cd.sh
 ``` 
 4. Evaluate the results:
 
-Change the path and scene name in diffusion_consistency_radar/scripts/evaluate.py, Then:
+Change *BASE_PATH* and *SCENE_NAME*  in diffusion_consistency_radar/scripts/evaluate.py, Then:
 ```
 cd diffusion_consistency_radar
 python scripts/evaluate.py
