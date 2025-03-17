@@ -22,8 +22,8 @@ def cumpute_chamfer_distance(GT, Pred):
 
 def evaluate_matches(distance_A_to_B, distance_B_to_A, threshold):
     TP = np.sum(distance_B_to_A <= threshold)
-    FN = np.sum(distance_B_to_A > threshold)
-    FP = np.sum(distance_A_to_B > threshold)
+    FP = np.sum(distance_B_to_A > threshold)
+    FN = np.sum(distance_A_to_B > threshold)
     TN = 0
 
     precision = TP / (TP + FP) if (TP + FP) > 0 else 0
