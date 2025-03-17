@@ -13,8 +13,8 @@ def cumpute_chamfer_distance(GT, Pred):
     kdtree_GT = cKDTree(GT)
     kdtree_Pred = cKDTree(Pred)
 
-    distance_GT_to_Pred, _ = kdtree_GT.query(Pred)
-    distance_Pred_to_GT, _ = kdtree_Pred.query(GT)
+    distance_Pred_to_GT, _ = kdtree_GT.query(Pred)
+    distance_GT_to_Pred, _ = kdtree_Pred.query(GT)
 
     chamfer_dist = np.mean(distance_GT_to_Pred) + np.mean(distance_Pred_to_GT) 
 
