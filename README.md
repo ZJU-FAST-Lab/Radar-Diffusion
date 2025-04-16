@@ -5,6 +5,8 @@
 - 29 August, 2024: Updating coloradar dataset [download link](http://zjufast.tpddns.cn:9110/share.cgi?ssid=a6d37f7f87af4590aaeb345ac9db2346).
 - 18 October, 2024: Updating checkpoint [download link](http://zjufast.tpddns.cn:9110/share.cgi?ssid=a54ee5a706754b1c9cfb0e4a752180fc) in case that you fail to download the checkpoints uploaded to this git repo.  
 - 8 March, 2025: Updating evaluation scripts.
+- 16 April, 2025: Updating google drive link for downloading radar diffusion checkpoints [download link](https://drive.google.com/drive/folders/1xRnR3ED-hOHMdpfS8XIQYtJirp7ZizTE?usp=drive_link).
+  
 # TODO
 - [x] Release training and testing code for Radar-Diffusion.
 - [x] Release pre-trained models in **diffusion_consistency_radar/checkpoint**.
