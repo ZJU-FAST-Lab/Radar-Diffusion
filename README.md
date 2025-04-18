@@ -2,7 +2,7 @@
 # News
 - 25 June, 2024: Paper accepted by  _IEEE Robotics and Automation Letters (RA-L)_ !
 - 27 July, 2024: Code and pre-trained models released!
-- 29 August, 2024: Updating coloradar dataset [download link](http://zjufast.tpddns.cn:9110/share.cgi?ssid=a6d37f7f87af4590aaeb345ac9db2346).
+- 29 August, 2024: Updating coloradar dataset [download link](http://zjufast.tpddns.cn:9110/share.cgi?ssid=f7f0dcf180c04488ba9219f6504bbb7b).
 - 18 October, 2024: Updating checkpoint [download link](http://zjufast.tpddns.cn:9110/share.cgi?ssid=a54ee5a706754b1c9cfb0e4a752180fc) in case that you fail to download the checkpoints uploaded to this git repo.  
 - 8 March, 2025: Updating evaluation scripts.
 - 16 April, 2025: Updating google drive link for downloading radar diffusion checkpoints [download link](https://drive.google.com/drive/folders/1xRnR3ED-hOHMdpfS8XIQYtJirp7ZizTE?usp=drive_link).
@@ -50,7 +50,7 @@ The above script runs consistency inference in **only 1 step** using the pre-tra
 
 ## Dataset Pre-processing
 1. First, download the [Coloradar dataset](https://arpg.github.io/coloradar/) (kitti format).
-   In case of network issues, we share a [download link](http://zjufast.tpddns.cn:9110/share.cgi?ssid=a6d37f7f87af4590aaeb345ac9db2346) here. 
+   In case of network issues, we share a [download link](http://zjufast.tpddns.cn:9110/share.cgi?ssid=f7f0dcf180c04488ba9219f6504bbb7b) here. 
 2. Unzip all the subsequences in a folder, then run: 
 ```
 python Coloradar_pre_processing/generate_coloradar_timestamp_index.py
