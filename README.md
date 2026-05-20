@@ -2,8 +2,8 @@
 # News
 - 25 June, 2024: Paper accepted by  _IEEE Robotics and Automation Letters (RA-L)_ !
 - 27 July, 2024: Code and pre-trained models released!
-- 29 August, 2024: Updating coloradar dataset [download link](http://zjufast.kmras.com:9110/share.cgi?ssid=8a4a02279d484cb1970da3a3efb6b18e).
-- 18 October, 2024: Updating checkpoint [download link](http://zjufast.kmras.com:9110/share.cgi?ssid=f29974e762464c7da74c8971e8bb5b7a) in case that you fail to download the checkpoints uploaded to this git repo.  
+- 29 August, 2024: Updating coloradar dataset [download link](http://zjufast.kmras.com:9110/share.cgi?ssid=0261375a17eb4207a55247629d9ae962).
+- 18 October, 2024: Updating checkpoint [download link](http://zjufast.kmras.com:9110/share.cgi?ssid=a6b3a2f261334040b9da1c56fd0f58db) in case that you fail to download the checkpoints uploaded to this git repo.  
 - 8 March, 2025: Updating evaluation scripts.
 - 16 April, 2025: Updating google drive link for downloading radar diffusion checkpoints [download link](https://drive.google.com/drive/folders/1xRnR3ED-hOHMdpfS8XIQYtJirp7ZizTE?usp=drive_link).
   
